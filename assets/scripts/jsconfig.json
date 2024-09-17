@@ -1,0 +1,8 @@
+{
+    "dependencies": {
+      "@supabase/supabase-js": "^2.44.4",
+      "firebase": "^10.12.3"
+    }
+  }
+
+// This file is used by VS Code to provide intellisense and other features.
