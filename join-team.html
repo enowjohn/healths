@@ -1,0 +1,144 @@
+
+<!-- @format -->
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Register An Account</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<!-- <link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+			rel="stylesheet"
+		/> -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<!-- <link rel="stylesheet" href="/assets/styles/register.css"> -->
+	</head>
+	<body>
+	  <!-- Success Alert -->
+      <div class="custom__alert--wrapper">
+        <div class="custom__alert--items">
+            <div class="custom__alert--item1">
+                <i class=" fa fa-circle-check"></i>
+                <p class="alert-message"></p>
+            </div>
+            <div class="custom__alert--item2">
+                <span class="close-alert"><i class=" fa fa-times"></i></span>
+                
+            </div>
+        </div>
+        <div class="progressBar">
+            
+        </div>
+     </div>
+
+      <!-- Failure Alert -->
+      <div class="faild__alert">
+        <div class="custom__alert--items">
+            <div class="custom__alert--item1 ">
+                <i class=" fa fa-warning"></i>
+                <p class="alert-message failedAler-Message"></p>
+            </div>
+            <div class="custom__alert--item2">
+                <span class="close-alertFaild"><i class=" fa fa-times"></i></span>
+                
+            </div>
+        </div>
+        <div class="failedProgressBar">
+            
+        </div>
+     </div>
+		
+
+		<div id="account__wrapper" class="content__popup-wrapper">
+			<div class="geteway--container registerContainer">
+				<form class="setup-gateway form">
+					<h3 class="headings-gateway">Create Your account</h3>
+					<div class="gateaway__form--items">
+						<label for="name">Full Name</label>
+						<input
+							class="gateway__form-item"
+							name="fName"
+							type="text"
+							placeholder="Enter your name"
+							required
+						/>
+					</div>
+					<div class="gateaway__form--items">
+						<label for="email">Email</label>
+						<input
+							class="gateway__form-item"
+							name="email"
+							type="email"
+							placeholder="Enter your emal"
+							required
+						/>
+					</div>
+					<div class="gateaway__form--items">
+						<label for="phone">Phone Number</label>
+						<input
+							class="gateway__form-item"
+							name="phone"
+							type="tel"
+							placeholder="Enter your Number"
+							minlength="9"
+							required
+						/>
+					</div>
+					<div class="gateaway__form--items">
+						<label for="method">Choose Method</label>
+						<select class="gateway__form-item" name="userRole" id="userRole">
+							<option value="doctor">Doctor</option>
+								<option value="patient">Patient</option>
+						</select>
+					</div>
+					<div class="gateaway__form--items">
+						<label for="gender">Select gender</label>
+							<select  class="gateway__form-item" name="gender" id="gender" required>
+								<option value="male">Male</option>
+								<option value="female">Female</option>
+							</select>
+					</div>
+					<div class="gateaway__form--items">
+						<label for="passowrd">Password</label>
+							<input
+							class="gateway__form-item"
+							id="Password"
+								name="password"
+								type="password"
+								minlength="7"
+								placeholder="Enter your passowrd" required
+							/>
+					</div>
+					<div class="gateaway__form--items">
+						<label for="cfPassowrd">Confirm Password</label>
+							<input
+							class="gateway__form-item"
+							id="cfpassword"
+								name="cfpassword"
+								type="password"
+								placeholder="Confirm Your Password" required
+							/>
+					</div>
+					<div id="gateaway__form--btn" class="gateaway__form--btn">
+						<button class="addMethod-btn add-Btn submitBtn">Register Now</button>
+					</div>
+					<div>
+						<p class="action-text">
+							Have an account? <a href="/login.html">login here</a>
+						</p>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<script type="module" src="/assets/scripts/jiontteam.js"></script>
+		<script type="module" src="/assets/scripts/custom_alert.js"></script>
+	
+
+		<script></script>
+	</body>
+</html>

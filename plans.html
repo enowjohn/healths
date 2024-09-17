@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Plans</title>
+    <link rel="stylesheet" href="/assets/styles/plans.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        Healthcare Service - Available Plans
+    </header>
+
+    <div class="container">
+        <!-- Plan 1 -->
+        <div class="plan">
+            <h2>Basic Health Plan</h2>
+            <p>
+                This plan covers essential health services including consultations, basic lab tests, and medication coverage.
+            </p>
+            <p><strong>Price:</strong> $50/month</p>
+            <button class="subscribe-btn" id="subscribeBtn1">Subscribe Now</button>
+        </div>
+
+        <!-- Plan 2 -->
+        <div class="plan">
+            <h2>Standard Health Plan</h2>
+            <p>
+                The Standard plan includes all features of the Basic Plan plus advanced diagnostics, specialist consultations, and extended medication coverage.
+            </p>
+            <p><strong>Price:</strong> $100/month</p>
+            <button class="subscribe-btn" id="subscribeBtn2">Subscribe Now</button>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="plan">
+            <h2>Premium Health Plan</h2>
+            <p>
+                Our Premium plan offers comprehensive coverage including surgeries, hospitalization, and emergency services. Access to all specialists with priority appointments.
+            </p>
+            <p><strong>Price:</strong> $200/month</p>
+            <button class="subscribe-btn" id="subscribeBtn3">Subscribe Now</button>
+        </div>
+    </div>
+
+      <!-- Payment method selection -->
+      <div class="payment-methods">
+        <h3>Select Payment Method</h3>
+        <select id="payment-method">
+            <option value="">-- Select a payment method --</option>
+            <option value="paypal">PayPal</option>
+            <option value="mtnmomo">MTN MoMo</option>
+            <option value="bankcard">Bank Card</option>
+            <!-- Add more options as needed -->
+        </select>
+        <button class="pay-btn" onclick="processPayment()">Proceed to Pay</button>
+
+    </div>
+    <div class="payment-section" id="payment-section">
+        <h3>Enter the amount you paid:</h3>
+        <input type="number" id="paid-amount" placeholder="Enter amount in USD">
+        <button id="confirm-payment">Confirm Payment</button>
+    </div>
+
+</body>
+<script src="/assets/scripts/plant.js"></script>
+</html>
