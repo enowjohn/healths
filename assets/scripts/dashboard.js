@@ -221,3 +221,100 @@ setActiveMenuItem();
 // Initial function calls
 getUserInfo();
 getDoctors();
+
+
+  // Sample data to search from (this should be replaced by fetching data from Supabase)
+  const data = [
+    { name: 'City Hospital', type: 'hospital', details: 'Located in downtown.' },
+    { name: 'Dr. John Doe', type: 'doctor', details: 'Specialist in Cardiology.' },
+    { name: 'Green Valley Clinic', type: 'hospital', details: 'Open 24/7.' },
+    { name: 'Dr. Sarah Smith', type: 'doctor', details: 'Pediatrician with 10 years experience.' },
+  ];
+
+  // Search functionality
+  document.getElementById('searchIcon').addEventListener('click', function() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    const results = data.filter(item => 
+      item.name.toLowerCase().includes(query) || 
+      item.details.toLowerCase().includes(query)
+    );
+    console.log('Search Results:', results); // Display search results (implement displaying on UI as needed)
+  });
+
+  // Notification functionality
+  const notificationIcon = document.getElementById('notificationIcon');
+  const notificationCount = document.getElementById('notificationCount');
+
+  // Fetch notifications from Supabase (sample setup)
+  function fetchNotifications() {
+    // Fetch notifications from your Supabase table (placeholder function)
+    const notifications = [
+      { message: 'Appointment confirmed.' },
+      { message: 'New doctor available.' }
+    ]; // Replace with actual fetching logic
+
+    // Update notification count
+    notificationCount.textContent = notifications.length;
+    notificationIcon.addEventListener('click', () => {
+      console.log('Notifications:', notifications); // Show notifications on click (implement UI logic)
+    });
+  }
+  fetchNotifications();
+
+  // Profile image upload
+  const profileImage = document.getElementById('profileImage');
+  const uploadProfileImage = document.getElementById('uploadProfileImage');
+
+  profileImage.addEventListener('click', () => {
+    uploadProfileImage.click();
+  });
+
+  uploadProfileImage.addEventListener('change', function() {
+    const file = this.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        profileImage.src = e.target.result;
+        // Upload to Supabase storage here (placeholder logic)
+        console.log('Profile image updated.');
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+
+
+
+
+  // In your script file
+
+// Fetch notifications (mocked data)
+async function loadNotifications() {
+    // Replace with actual Supabase query to fetch notifications
+    return [
+      { id: 1, message: 'New message from Dr. Smith' },
+      { id: 2, message: 'Appointment scheduled for tomorrow' },
+    ];
+  }
+  
+  // Display notifications
+  async function showNotifications() {
+    const notifications = await loadNotifications();
+    const dropdown = document.getElementById('notificationDropdown');
+    dropdown.innerHTML = notifications.map(n => `<div class="notification">${n.message}</div>`).join('');
+    dropdown.style.display = 'block';
+
+    dropdown.addEventListener('click', (event) => {
+      if (event.target.classList.contains('notification')) {
+        // Handle notification click (e.g., mark as read, navigate to related page)
+        console.log('Notification clicked:', event.target.innerText);
+      }
+    })
+  }
+  
+  // Toggle notifications display on icon click
+  document.getElementById('notificationIcon').addEventListener('click', () => {
+    const dropdown = document.getElementById('notificationDropdown');
+    dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+  });
+  

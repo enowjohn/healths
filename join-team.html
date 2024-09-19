@@ -15,7 +15,8 @@
 		/> -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<!-- <link rel="stylesheet" href="/assets/styles/register.css"> -->
+	<link rel="stylesheet" href="/assets/styles/register.css">
+	<link rel="stylesheet" href="/assets/styles/withdraw.css">
 	</head>
 	<body>
 	  <!-- Success Alert -->
@@ -60,6 +61,7 @@
 					<div class="gateaway__form--items">
 						<label for="name">Full Name</label>
 						<input
+							id="main-input"
 							class="gateway__form-item"
 							name="fName"
 							type="text"
@@ -80,6 +82,7 @@
 					<div class="gateaway__form--items">
 						<label for="phone">Phone Number</label>
 						<input
+							id="main-input"
 							class="gateway__form-item"
 							name="phone"
 							type="tel"
@@ -88,14 +91,14 @@
 							required
 						/>
 					</div>
-					<div class="gateaway__form--items">
+					<div class="gateaway__form--items" id="main-input">
 						<label for="method">Choose Method</label>
 						<select class="gateway__form-item" name="userRole" id="userRole">
 							<option value="doctor">Doctor</option>
 								<option value="patient">Patient</option>
 						</select>
 					</div>
-					<div class="gateaway__form--items">
+					<div class="gateaway__form--items" id="main-input">
 						<label for="gender">Select gender</label>
 							<select  class="gateway__form-item" name="gender" id="gender" required>
 								<option value="male">Male</option>
@@ -124,7 +127,7 @@
 							/>
 					</div>
 					<div id="gateaway__form--btn" class="gateaway__form--btn">
-						<button class="addMethod-btn add-Btn submitBtn">Register Now</button>
+						<button class="addMethod-btn add-Btn submitBtn" id="submitBtn">Register Now</button>
 					</div>
 					<div>
 						<p class="action-text">

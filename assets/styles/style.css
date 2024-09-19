@@ -564,6 +564,24 @@
     flex-wrap: wrap;
     gap: 20px 15px;
   }
+
+  input[type="email"], input[type="password"] {
+    width: 120%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#email {
+  width: 40rem;
+  height: 3rem;
+}
+
+#password {
+  width: 40rem;
+  height: 3rem;
+}
   
   .tab-btn {
     background-color: var(--alice-blue);

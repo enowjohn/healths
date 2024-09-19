@@ -25,10 +25,10 @@
         padding: 0;
         font-family: 'Poppins', sans-serif;
       }
-      .dashboard-container {
+      /* .dashboard-container {
         display: flex;
         height: 100vh;
-      }
+      } */
       .siderbar-left {
         width: 250px;
         background-color: #000000;
@@ -41,6 +41,7 @@
         padding: 20px;
         z-index: 100;
       }
+      
       .sidebar-left_nav-items {
         list-style: none;
         padding: 0;
@@ -160,8 +161,28 @@
         </section>
       </div>
 
+
+       <!-- <div class="main-page">
+        <div class="header">
+          <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search hospitals, doctors..." />
+            <i class="fas fa-search" id="searchIcon"></i>
+          </div> -->
+          <!-- <div class="icons-container">
+            <div class="icon" id="notificationIcon">
+              <i class="fas fa-bell"></i>
+              <span class="notification-badge" id="notificationCount">0</span>
+            </div> -->
+            <!-- <div class="profile-holder">
+              <input type="file" id="uploadProfileImage" accept="image/*" style="display: none;" />
+              <img src="default-avatar.jpg" alt="User Profile" id="profileImage" />
+              <span class="user-name" id="userName">User Name</span>
+            </div>
+          </div>
+        </div>  -->
+
       <!-- Right Sidebar -->
-      <div class="sidebar-right">
+      <!-- <div class="sidebar-right">
         <div class="top-doctors">
           <p class="top-doctor-heading top-doct">Top Doctors</p>
           <div class="appt"></div>
@@ -170,8 +191,14 @@
             <div class="appt"></div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
+
+    <!-- Add to your HTML structure -->
+<div class="notification-dropdown" id="notificationDropdown" style="display: none;">
+  <!-- Notification messages will be inserted here -->
+</div>
+
 
     <script type="module" src="/assets/scripts/auth.js"></script>
     <script type="module" src="/assets/scripts/dashboard.js"></script>

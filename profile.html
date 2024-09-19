@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="/assets/styles/profile.css"> <!-- Link to your external CSS -->
+</head>
+<body>
+
+<div class="profile-container">
+  <h2>Your Profile</h2>
+  <div class="profile-header">
+    <img src="default-avatar.jpg" alt="Profile Image" class="profile-image" id="profileImage">
+    <div class="upload-btn-wrapper">
+      <input type="file" name="file" id="uploadImage" style="display: none;" accept="image/*" />
+      <button class="upload-btn" onclick="document.getElementById('uploadImage').click()">Change Photo</button>
+    </div>
+  </div>
+  
+  <div class="profile-details">
+    <label for="fullName">Full Name</label>
+    <input type="text" id="fullName" placeholder="Enter your full name">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Enter your email">
+
+    <label for="phone">Phone</label>
+    <input type="tel" id="phone" placeholder="Enter your phone number">
+
+    <label for="gender">Gender</label>
+    <select id="gender">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
+    
+    <button class="btn-save">Save Changes</button>
+    <button class="btn-delete">Delete Profile</button>
+  </div>
+</div>
+
+<!-- Import menu.js and profile.js -->
+<script type="module" src="/assets/scripts/profile.js"></script>
+<script type="module" src="/assets/scripts/menu.js"></script>
+
+</body>
+</html>

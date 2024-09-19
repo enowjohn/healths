@@ -1,0 +1,119 @@
+   /* General page styling */
+   body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .profile-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .profile-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #4CAF50;
+  }
+
+  .upload-btn-wrapper {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .upload-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .upload-btn:hover {
+    background-color: #45a049;
+  }
+
+  .profile-details {
+    margin-top: 20px;
+  }
+
+  .profile-details label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .profile-details input[type="text"], 
+  .profile-details input[type="email"], 
+  .profile-details input[type="tel"], 
+  .profile-details select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  .btn-save {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .btn-save:hover {
+    background-color: #45a049;
+  }
+
+  .btn-delete {
+    background-color: #ff4b5c;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .btn-delete:hover {
+    background-color: #ff0000;
+  }
