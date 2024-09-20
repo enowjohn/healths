@@ -101,29 +101,3 @@ document.querySelector('.btn-save').addEventListener('click', async () => {
 // Load user profile on page load
 window.onload = loadUserProfile;
 
-
-
-// In your script file
-
-// Fetch notifications (mocked data)
-async function loadNotifications() {
-  // Replace with actual Supabase query to fetch notifications
-  return [
-    { id: 1, message: 'New message from Dr. Smith' },
-    { id: 2, message: 'Appointment scheduled for tomorrow' },
-  ];
-}
-
-// Display notifications
-async function showNotifications() {
-  const notifications = await loadNotifications();
-  const dropdown = document.getElementById('notificationDropdown');
-  dropdown.innerHTML = notifications.map(n => `<div class="notification">${n.message}</div>`).join('');
-  dropdown.style.display = 'block';
-}
-
-// Toggle notifications display on icon click
-document.getElementById('notificationIcon').addEventListener('click', () => {
-  const dropdown = document.getElementById('notificationDropdown');
-  dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
-});
