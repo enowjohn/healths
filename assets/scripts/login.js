@@ -31,7 +31,7 @@ submitBtn.addEventListener("click", async (e) => {
       localStorage.setItem("activeId", JSON.stringify(data[0].id));
       showSucessAlert("Login successful! Redirecting...");
       setTimeout(function () {
-        window.location.href = "../dashboard.html"; // Redirect to dashboard
+        window.location.href = "./dashboard.html"; // Redirect to dashboard
       }, 1500);
     } else {
       failedsAlert("Wrong password");
