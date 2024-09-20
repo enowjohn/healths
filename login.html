@@ -1,141 +1,140 @@
-
 <!-- @format -->
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Login to Your account</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-		/>
-		<link rel="stylesheet" href="/assets/styles/style.css" />
-		<link rel="stylesheet" href="/assets/styles/register.css" />
-		<link rel="stylesheet" href="/assets/styles/withdraw.css">
-		<!-- <link rel="stylesheet" href="/styles/style.css"> -->
-		<style>
-			/* HTML: <div class="loader"></div> */
-/* HTML: <div class="loader"></div> */
-.loader {
-  width: 20px;
-  aspect-ratio: 1;
-  display: grid;
-}
-.loader::before,
-.loader::after {
-  content: "";
-  grid-area: 1/1;
-  border-radius: 50%;
-  background: repeating-radial-gradient(farthest-side,#0000 0%,#000 1% 10%,#0000 11% 30%);
-  /* -webkit-mask: repeating-conic-gradient(#000 0 36deg,#0000 0 72deg); */
-  animation: l19 4s infinite linear;
-}
-.loader::after {
-  /* -webkit-mask: repeating-conic-gradient(#0000 0 36deg,#000 0 72deg); */
-  animation-direction: reverse;
-}
-@keyframes l19 {
-  100% {transform:rotate(1turn)}
-}
-.submitBtn{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 0.2rem;
-}
-		</style>
-	</head>
-	<body>
-	  <!-- Success Alert -->
-      <div class="custom__alert--wrapper">
-        <div class="custom__alert--items">
-            <div class="custom__alert--item1">
-                <i class=" fa fa-circle-check"></i>
-                <p class="alert-message"></p>
-            </div>
-            <div class="custom__alert--item2">
-                <span class="close-alert"><i class=" fa fa-times"></i></span>
-                
-            </div>
-        </div>
-        <div class="progressBar">
-            
-        </div>
-     </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login to Your account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!-- Corrected stylesheet paths -->
+    <link rel="stylesheet" href="/assets/styles/style.css" />
+    <link rel="stylesheet" href="/assets/styles/register.css" />
 
-      <!-- Failure Alert -->
-      <div class="faild__alert">
-        <div class="custom__alert--items">
-            <div class="custom__alert--item1 ">
-                <i class=" fa fa-warning"></i>
-                <p class="alert-message failedAler-Message"></p>
-            </div>
-            <div class="custom__alert--item2">
-                <span class="close-alertFaild"><i class=" fa fa-times"></i></span>
-                
-            </div>
+    <style>
+      .loader {
+        width: 20px;
+        aspect-ratio: 1;
+        display: grid;
+      }
+      .loader::before,
+      .loader::after {
+        content: '';
+        grid-area: 1/1;
+        border-radius: 50%;
+        background: repeating-radial-gradient(
+          farthest-side,
+          #0000 0%,
+          #000 1% 10%,
+          #0000 11% 30%
+        );
+        -webkit-mask: repeating-conic-gradient(#000 0 36deg, #0000 0 72deg);
+        animation: l19 4s infinite linear;
+      }
+      .loader::after {
+        -webkit-mask: repeating-conic-gradient(#0000 0 36deg, #000 0 72deg);
+        animation-direction: reverse;
+      }
+      @keyframes l19 {
+        100% {
+          transform: rotate(1turn);
+        }
+      }
+      .submitBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Success Alert -->
+    <div class="custom__alert--wrapper">
+      <div class="custom__alert--items">
+        <div class="custom__alert--item1">
+          <i class="fa fa-circle-check"></i>
+          <p class="alert-message"></p>
         </div>
-        <div class="failedProgressBar">
-            
+        <div class="custom__alert--item2">
+          <span class="close-alert"><i class="fa fa-times"></i></span>
         </div>
-     </div>
-			
-		<div class="content__popup-wrapper">
-			<div class="geteway--container registerContainer">
-				<form id="loginform"  class="setup-gateway form">
-					<h3 class="headings-gateway">Welcome Back <br> Login to continue</h3>
-					
-					<div class="gateaway__form--items">
-						<label for="email">Email</label>
-						<input
-							class="gateway__form-item"
-							name="email"
-							type="email"
-							placeholder="Enter your emal"
-							required
-						/>
-					</div>
-					
-					<div class="gateaway__form--items">
-						<label for="passowrd">Password</label>
-							<input
-							class="gateway__form-item"
-							id="Password"
-								name="password"
-								type="password"
-								minlength="7"
-								placeholder="Enter your passowrd" required
-							/>
-					</div>
-				
-					<div id="gateaway__form--btn" class="gateaway__form--btn">
-						<button class="addMethod-btn add-Btn submitBtn" id="loginBtn">Login</button>
-					</div>
-					<div>
-						<p class="action-text">
-						Donot Have an account? <a href="/join-team.html">Register Here</a>
-						</p>
-					</div>
-				</form>
-			</div>
-		</div>
+      </div>
+      <div class="progressBar"></div>
+    </div>
 
+    <!-- Failure Alert -->
+    <div class="faild__alert">
+      <div class="custom__alert--items">
+        <div class="custom__alert--item1">
+          <i class="fa fa-warning"></i>
+          <p class="alert-message failedAler-Message"></p>
+        </div>
+        <div class="custom__alert--item2">
+          <span class="close-alertFaild"><i class="fa fa-times"></i></span>
+        </div>
+      </div>
+      <div class="failedProgressBar"></div>
+    </div>
 
-		<!-- <script type="module" src="/scripts/auth.js"></script> -->
-		<script type="module" src="/assets/scripts/login.js"></script>
-		
+    <div class="content__popup-wrapper">
+      <div class="geteway--container registerContainer">
+        <form id="loginform" class="setup-gateway form">
+          <h3 class="headings-gateway">Welcome Back <br /> Login to continue</h3>
+
+          <div class="gateaway__form--items">
+            <label for="email">Email</label>
+            <input
+              class="gateway__form-item"
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div class="gateaway__form--items">
+            <label for="password">Password</label>
+            <input
+              class="gateway__form-item"
+              id="password"
+              name="password"
+              type="password"
+              minlength="7"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              required
+            />
+          </div>
+
+          <div id="gateaway__form--btn" class="gateaway__form--btn">
+            <button class="addMethod-btn add-Btn submitBtn">Login</button>
+          </div>
+          <div>
+            <p class="action-text">
+              Don’t Have an account?
+              <a href="/join-team.html">Register Here</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="/assets/scripts/login.js"></script>
+  </body>
 </html>
