@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patients</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="./assets/styles/style.css"> <!-- Link to your CSS file -->
     <style>
         /* Basic CSS for the layout */
         body {
@@ -58,6 +58,21 @@
         .btn:hover {
             background-color: #45a049;
         }
+
+    
+        .btns:hover {
+            background-color: #45a049;
+        }
+
+        .btns {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -87,7 +102,7 @@
                     <td>john@example.com</td>
                     <td>+1234567890</td>
                     <td>Male</td>
-                    <td><button class="btn">View Profile</button></td>
+                    <td><button class="btns">View Profile</button></td>
                     <td><button class="btn">Manage Appointments</button></td>
                 </tr>
                 <!-- Example Patient 2 -->
@@ -97,13 +112,14 @@
                     <td>jane@example.com</td>
                     <td>+0987654321</td>
                     <td>Female</td>
-                    <td><button class="btn">View Profile</button></td>
-                    <td><button class="btn">Manage Appointments</button></td>
+                    <td><button class="btns" id="view-profile">View Profile</button></td>
+                    <td><button class="btn" id="manage-appointments">Manage Appointments</button></td>
                 </tr>
                 <!-- Add more patients here -->
             </tbody>
         </table>
     </div>
 </body>
-<script src="/assets/scripts/patient.js"></script>
+<script src="./assets/scripts/patient.js"></script>
+<script type="module" src="./assets/scripts/jiontteam.js"></script>
 </html>
